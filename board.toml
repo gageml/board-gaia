@@ -1,0 +1,133 @@
+id = "286c2f50-27dc-4928-a11e-4518a6175a18"
+
+[run-select]
+
+operation = "import"
+status = "completed"
+
+[group-select]
+
+group-by = { attribute = "model" }
+max = { run-attr = "started" }
+
+[[columns]]
+
+run-attr = "id"
+label = "Run ID"
+description = """
+Unique identifier of the Gage run that imported the model eval results.
+"""
+hide = true
+
+[[columns.links]]
+
+# TODO - link to actual help page on runs
+href = "https://github.com/gageml/gage"
+type = "help"
+label = "Help with Gage Runs"
+
+[[columns]]
+
+run-attr = "operation"
+hide = true
+filter-search = false
+
+[[columns]]
+
+run-attr = "status"
+label = "Run Status"
+hide = true
+filter-search = false
+
+[[columns]]
+
+attribute = "model"
+label = "Model Name"
+
+[[columns.links]]
+
+href = "https://gaia-benchmark-leaderboard.hf.space"
+label = "Hugging Face Leaderboard"
+type = "leaderboard"
+
+[[columns]]
+
+metric = "score"
+label = "Average Score (%)"
+description = "Average of levels 1 through 3."
+sort = "desc"
+
+[[columns.links]]
+
+href = "https://huggingface.co/datasets/gaia-benchmark/GAIA"
+label = "Benchmark Dataset"
+type = "dataset"
+
+[[columns.links]]
+
+href = "https://arxiv.org/abs/2311.12983"
+label = "GAIA: a benchmark for General AI Assistants"
+type = "paper"
+
+[[columns]]
+
+metric = "score_level1"
+label = "Level 1 Score (%)"
+description = "Level 1 should be breakable by very good LLMs."
+
+[[columns.links]]
+
+href = "https://huggingface.co/datasets/gaia-benchmark/GAIA"
+label = "Benchmark Dataset"
+type = "dataset"
+
+[[columns.links]]
+
+href = "https://arxiv.org/abs/2311.12983"
+label = "GAIA: a benchmark for General AI Assistants"
+type = "paper"
+
+[[columns]]
+
+metric = "score_level2"
+label = "Level 2 Score (%)"
+
+[[columns.links]]
+
+href = "https://huggingface.co/datasets/gaia-benchmark/GAIA"
+label = "Benchmark Dataset"
+type = "dataset"
+
+[[columns.links]]
+
+href = "https://arxiv.org/abs/2311.12983"
+label = "GAIA: a benchmark for General AI Assistants"
+type = "paper"
+
+[[columns]]
+
+metric = "score_level3"
+label = "Level 3 Score (%)"
+description = "Level 3 indicates a strong jump in model capabilities."
+
+[[columns.links]]
+
+href = "https://huggingface.co/datasets/gaia-benchmark/GAIA"
+label = "Benchmark Dataset"
+type = "dataset"
+
+[[columns.links]]
+
+href = "https://arxiv.org/abs/2311.12983"
+label = "GAIA: a benchmark for General AI Assistants"
+type = "paper"
+
+[[columns]]
+
+attribute = "organisation"
+label = "Organisation"
+
+[[columns]]
+
+attribute = "model_family"
+label = "Model Family"

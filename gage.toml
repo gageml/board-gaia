@@ -1,0 +1,11 @@
+[import]
+
+description = "Import GAIA results for a model"
+exec = "python import.py"
+config = "import.py"
+
+[batch]
+
+description = "Import results for all models"
+exec = "python -m gage.hf.batch --fff --bbbb"
+config = "batch.py#limit"
